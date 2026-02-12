@@ -31,11 +31,11 @@ Download the latest release for your platform:
 
 ```bash
 # Install script (macOS / Linux)
-curl -fsSL https://raw.githubusercontent.com/anthropics/grain/dev/install | bash
+curl -fsSL https://raw.githubusercontent.com/littledivy/gubgub/dev/install | bash
 ```
 
 Or download manually from
-[Releases](https://github.com/anthropics/grain/releases).
+[Releases](https://github.com/littledivy/gubgub/releases).
 
 Then run:
 
@@ -110,8 +110,6 @@ Prerequisites: [Deno](https://deno.land), [Go](https://go.dev),
 transcription.
 
 ```bash
-git clone https://github.com/anthropics/grain.git
-cd grain
 cp .env.example www/.env   # edit as needed
 
 # Start everything (web app + worker)

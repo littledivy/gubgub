@@ -29,8 +29,8 @@ export default function Landing() {
           <nav class="landing-nav">
             <a class="brand" href="/">gubgub</a>
             <div class="landing-nav-links">
-              <a href="https://github.com/anthropics/grain">GitHub</a>
-              <a href="/login" class="btn btn-primary btn-sm">Sign In</a>
+              <a href="https://github.com/littledivy/gubgub">GitHub</a>
+              <a href="/login" class="btn btn-sm">Sign in to this instance</a>
             </div>
           </nav>
 
@@ -41,12 +41,11 @@ export default function Landing() {
             </h1>
             <p class="hero-sub">
               A bot joins your Google Meet, records everything, transcribes with
-              Whisper, and summarizes with the LLM of your choice. Your data
-              stays on your machine.
+              Whisper, and summarizes with the LLM of your choice.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#install">Get Started</a>
-              <a class="btn" href="https://github.com/anthropics/grain">
+              <a class="btn" href="https://github.com/littledivy/gubgub">
                 View Source
               </a>
             </div>
@@ -83,7 +82,7 @@ export default function Landing() {
                     <span />
                   </div>
                   <div class="browser-url">
-                    <span>localhost:3000/app</span>
+                    <span>/app</span>
                   </div>
                 </div>
                 <div class="browser-content">
@@ -107,7 +106,7 @@ export default function Landing() {
                       <span />
                     </div>
                     <div class="browser-url">
-                      <span>localhost:3000/meetings/...</span>
+                      <span>/meetings/...</span>
                     </div>
                   </div>
                   <div class="browser-content">
@@ -120,8 +119,7 @@ export default function Landing() {
                 </div>
                 <h3>Recordings &amp; Transcripts</h3>
                 <p>
-                  Watch the recording with full seeking, read the transcript
-                  with timestamps, and review the AI summary.
+                  Watch the recording, read the transcript with timestamps, and review the AI summary.
                 </p>
               </div>
               <div class="showcase-card">
@@ -133,7 +131,7 @@ export default function Landing() {
                       <span />
                     </div>
                     <div class="browser-url">
-                      <span>localhost:3000/calendar</span>
+                      <span>/calendar</span>
                     </div>
                   </div>
                   <div class="browser-content">
@@ -159,7 +157,7 @@ export default function Landing() {
                       <span />
                     </div>
                     <div class="browser-url">
-                      <span>localhost:3000/workers</span>
+                      <span>/workers</span>
                     </div>
                   </div>
                   <div class="browser-content">
@@ -179,39 +177,6 @@ export default function Landing() {
             </div>
           </section>
 
-          {/* how it works */}
-          <section class="steps-section">
-            <h2 class="section-heading">How it works</h2>
-            <div class="steps">
-              <div class="step">
-                <div class="step-num">1</div>
-                <div>
-                  <h3>Install</h3>
-                  <p>One command. No Docker, no Kubernetes.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-num">2</div>
-                <div>
-                  <h3>Record</h3>
-                  <p>
-                    Paste a Google Meet link or pick from your calendar. A
-                    Chrome worker joins and records.
-                  </p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-num">3</div>
-                <div>
-                  <h3>Transcribe &amp; Summarize</h3>
-                  <p>
-                    Audio goes through Whisper, then your chosen LLM produces
-                    action items and a summary.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* install / CLI */}
           <section class="install-section" id="install">
