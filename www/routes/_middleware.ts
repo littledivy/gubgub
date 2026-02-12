@@ -3,6 +3,7 @@ import { getContext, getSessionUser } from "../lib.ts";
 
 const PUBLIC_PATHS = [
   "/login",
+  "/install",
   "/api/auth/login",
   "/api/auth/google",
   "/api/auth/google/callback",
