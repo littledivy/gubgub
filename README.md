@@ -2,31 +2,6 @@
 
 https://meet.littledivy.com
 
-### How it works
-
-gubgub is two processes: a **web app** (`www/`) that serves the UI and
-orchestrates the pipeline, and a **Go worker** (`main.go`) that drives a
-headless Chrome instance to join and record Google Meet sessions.
-
-When you start a recording, the web app spawns a worker process, which navigates
-Chrome into the meeting and captures media. Once the meeting ends (or you stop
-it), the pipeline kicks in: audio is extracted with ffmpeg, transcribed with
-Whisper (local CLI or OpenAI API), and summarized by Ollama, OpenAI, or
-Anthropic. Status updates stream to the browser over WebSocket.
-
-```
-browser ──▶ www (Deno Fresh :3000)
-              │
-              ├── Deno KV (meetings, transcripts, summaries)
-              ├── Storage (local disk or S3)
-              │
-              └── spawns ──▶ worker (Go :8089+)
-                               │
-                               └── headless Chrome ──▶ Google Meet
-```
-
-## Self-hosting
-
 ### Single binary (recommended)
 
 Download the latest release for your platform:
@@ -141,6 +116,29 @@ make clean    # removes build artifacts
 ```
 
 Requires Deno and Go.
+
+### How it works
+
+gubgub is two processes: a **web app** (`www/`) that serves the UI and
+orchestrates the pipeline, and a **Go worker** (`main.go`) that drives a
+headless Chrome instance to join and record Google Meet sessions.
+
+When you start a recording, the web app spawns a worker process, which navigates
+Chrome into the meeting and captures media. Once the meeting ends (or you stop
+it), the pipeline kicks in: audio is extracted with ffmpeg, transcribed with
+Whisper (local CLI or OpenAI API), and summarized by Ollama, OpenAI, or
+Anthropic. Status updates stream to the browser over WebSocket.
+
+```
+browser ──▶ www (Deno Fresh :3000)
+              │
+              ├── Deno KV (meetings, transcripts, summaries)
+              ├── Storage (local disk or S3)
+              │
+              └── spawns ──▶ worker (Go :8089+)
+                               │
+                               └── headless Chrome ──▶ Google Meet
+```
 
 ## Configuration
 
