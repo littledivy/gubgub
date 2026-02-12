@@ -3,7 +3,7 @@ import { Handlers } from "$fresh/server.ts";
 const SCRIPT = `#!/usr/bin/env bash
 set -euo pipefail
 
-REPO="divy/gubgub"
+REPO="littledivy/gubgub"
 INSTALL_DIR="/usr/local/bin"
 BINARY="gubgub"
 
