@@ -13,20 +13,82 @@ export const handler: Handlers = {
 
 export default function Landing() {
   return (
-    <html>
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>gubgub — self-hosted meeting recorder</title>
+        <title>gubgub — self-hosted meeting recorder for Google Meet</title>
+        <meta
+          name="description"
+          content="Record, transcribe, and summarize your Google Meet meetings. Self-hosted, open source, and private. Uses Whisper for transcription and any LLM for summaries."
+        />
+        <link rel="canonical" href="https://meet.littledivy.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="gubgub" />
+        <meta
+          property="og:title"
+          content="gubgub — self-hosted meeting recorder for Google Meet"
+        />
+        <meta
+          property="og:description"
+          content="Record, transcribe, and summarize your Google Meet meetings. Self-hosted, open source, and private."
+        />
+        <meta
+          property="og:image"
+          content="https://meet.littledivy.com/screenshots/dashboard.png"
+        />
+        <meta property="og:url" content="https://meet.littledivy.com/" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="gubgub — self-hosted meeting recorder"
+        />
+        <meta
+          name="twitter:description"
+          content="Record, transcribe, and summarize your Google Meet meetings. Self-hosted, open source, and private."
+        />
+        <meta
+          name="twitter:image"
+          content="https://meet.littledivy.com/screenshots/dashboard.png"
+        />
+
         <link rel="stylesheet" href="/styles.css" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/asciinema-player@3.9.0/dist/bundle/asciinema-player.css"
         />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "gubgub",
+              description:
+                "Self-hosted meeting recorder for Google Meet. Records, transcribes with Whisper, and summarizes with any LLM.",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "macOS, Linux",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+              license: "https://opensource.org/licenses/MIT",
+              url: "https://meet.littledivy.com/",
+              sourceOrganization: {
+                "@type": "Person",
+                name: "Divy Srivastava",
+                url: "https://github.com/littledivy",
+              },
+            }),
+          }}
+        />
       </head>
       <body>
         <div class="landing">
-          <nav class="landing-nav">
+          <nav class="landing-nav" aria-label="Main navigation">
             <a class="brand" href="/">gubgub</a>
             <div class="landing-nav-links">
               <a href="https://github.com/littledivy/gubgub">GitHub</a>
@@ -34,6 +96,7 @@ export default function Landing() {
             </div>
           </nav>
 
+          <main>
           <section class="hero">
             <h1 class="hero-headline">
               Record, transcribe, and summarize<br />
@@ -88,7 +151,7 @@ export default function Landing() {
                 <div class="browser-content">
                   <img
                     src="/screenshots/dashboard.png"
-                    alt="Dashboard overview"
+                    alt="gubgub dashboard showing meeting recordings, transcripts, and summaries"
                     loading="lazy"
                   />
                 </div>
@@ -147,8 +210,13 @@ export default function Landing() {
             </div>
           </section>
 
+          </main>
+
           <footer class="landing-footer">
-            <p>gubgub is open source under the MIT license.</p>
+            <p>
+              <a href="https://github.com/littledivy/gubgub">gubgub</a> is open
+              source under the MIT license.
+            </p>
           </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/asciinema-player@3.9.0/dist/bundle/asciinema-player.min.js">
