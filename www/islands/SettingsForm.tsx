@@ -97,7 +97,7 @@ export default function SettingsForm(
           ? (
             <div class="flex-between">
               <div>
-                <span class="text-sm">Signed in as</span>
+                <span class="text-sm">Signed in as </span>
                 <strong class="text-sm">{googleStatus.email}</strong>
               </div>
               <button
