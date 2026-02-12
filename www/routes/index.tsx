@@ -105,7 +105,7 @@ export default function Landing() {
                 <span class="install-tab active">macOS</span>
                 <span class="install-tab">Linux</span>
               </div>
-              <pre class="install-code"><code>curl -fsSL https://gubgub.sh/install | sh</code></pre>
+              <pre class="install-code"><code>curl -fsSL https://meet.littledivy.com/install | sh</code></pre>
               <p class="install-note">
                 Then run <code>gubgub</code> to start the server. That's it.
               </p>

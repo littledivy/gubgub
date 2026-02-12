@@ -31,7 +31,7 @@ Download the latest release for your platform:
 
 ```bash
 # Install script (macOS / Linux)
-curl -fsSL https://raw.githubusercontent.com/littledivy/gubgub/dev/install | bash
+curl -fsSL https://meet.littledivy.com/install | sh
 ```
 
 Or download manually from
