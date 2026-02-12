@@ -208,3 +208,11 @@ you have available.
 | **Transcription** | whisper.cpp | OpenAI Whisper API |
 | **Summarization** | Ollama      | OpenAI, Anthropic  |
 | **Storage**       | Local disk  | S3, R2, MinIO      |
+
+## Disclaimer
+
+This project is vibe coded and reviewed. Use at your own risk.
+
+## License
+
+[MIT](LICENSE)
