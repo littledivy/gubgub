@@ -2,7 +2,7 @@ import { Handlers } from "$fresh/server.ts";
 import { getContext } from "../../lib.ts";
 import type { SessionUser } from "../../lib.ts";
 
-const ADMIN_ONLY_KEYS = ["allowed_domain", "allowed_emails", "session_secret"];
+const ADMIN_ONLY_KEYS = ["allowed_domain", "allowed_emails", "session_secret", "worker_url"];
 
 export const handler: Handlers = {
   async GET() {

@@ -148,6 +148,24 @@ export default function SettingsForm(
 
           {isAdmin && (
             <>
+              <div class="section-title mt-2">Worker</div>
+              <div>
+                <label>Worker URL</label>
+                <input
+                  type="text"
+                  value={settings["worker_url"] || ""}
+                  onInput={(e) =>
+                    setSettings({
+                      ...settings,
+                      worker_url: (e.target as HTMLInputElement).value,
+                    })}
+                  placeholder="http://localhost:8089"
+                />
+                <div class="field-hint">
+                  Override the worker URL used for transcription.
+                </div>
+              </div>
+
               <div class="section-title mt-2">Access Control</div>
               <div>
                 <label>Allowed domain</label>

@@ -1713,11 +1713,19 @@ export async function getContext(): Promise<AppContext> {
 
   const config = loadConfig();
   const db = await DB.open();
+
+  const isDeployed = !!Deno.env.get("DENO_DEPLOYMENT_ID");
+
+  if (isDeployed) {
+    const dbSettings = await db.getSettings();
+    if (dbSettings["worker_url"]) {
+      config.workerURL = dbSettings["worker_url"];
+    }
+  }
+
   const hub = new Hub();
   const storage = initStorage(config);
   const workerClient = new WorkerClient(config.workerURL);
-
-  const isDeployed = !!Deno.env.get("DENO_DEPLOYMENT_ID");
 
   const provider = isDeployed
     ? new RemoteProvider(config.workerURL)
