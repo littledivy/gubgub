@@ -1,6 +1,6 @@
-# gubgub - Self-hosted meeting recorder and summarization
+# Self-hosted meeting recorder and summarization
 
-<img width="1549" height="965" alt="image" src="https://github.com/user-attachments/assets/be9dd8a5-3cdf-49b0-a513-ec30cea87ec0" />
+https://meet.littledivy.com
 
 ### How it works
 
