@@ -28,6 +28,7 @@ import * as $api_ws from "./routes/api/ws.ts";
 import * as $app from "./routes/app.tsx";
 import * as $calendar from "./routes/calendar.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $install from "./routes/install.ts";
 import * as $login from "./routes/login.tsx";
 import * as $meetings_id_ from "./routes/meetings/[id].tsx";
 import * as $meetings_index from "./routes/meetings/index.tsx";
@@ -71,6 +72,7 @@ const manifest = {
     "./routes/app.tsx": $app,
     "./routes/calendar.tsx": $calendar,
     "./routes/index.tsx": $index,
+    "./routes/install.ts": $install,
     "./routes/login.tsx": $login,
     "./routes/meetings/[id].tsx": $meetings_id_,
     "./routes/meetings/index.tsx": $meetings_index,
